@@ -9,6 +9,13 @@ import toast from 'react-hot-toast';
 import { formatINR } from '../../utils/price';
 import { FiHeart, FiMinus, FiPlus, FiShoppingBag, FiStar, FiArrowLeft } from 'react-icons/fi';
 
+export async function generateStaticParams() {
+  const products = ['1', '2', '3', '4', '5', '6'];
+  return products.map((id) => ({
+    id,
+  }));
+}
+
 // Mock product for demo
 const getProductById = (id) => {
   const products = {
